@@ -2,27 +2,33 @@ package edu.cnm.deepdive;
 
 public class FizzBuzz {
 
+  private static final int DEFUALT_ROOF = 100;
+
   public static void main(String[] args) {
-    aResult();
+
+    int roof = DEFUALT_ROOF;
+    for(int i = 1; i<= roof; i++) {
+      System.out.println(toString(i));
+    }
+
   }
 
-  public static void aResult() {
-    String result;
 
-    for(int i = 1; i <= 100; i++) {
-      if (i % 15 == 0) {
-        System.out.println("FizzBuzz!");
+  public static String toString(int num) {
+    String result = "";
+      if (num % 15 == 0) {
+        result = "FizzBuzz!";
       }
-      else if (i % 5 == 0) {
-        System.out.println("Buzz!");
+      else if (num % 5 == 0) {
+        result = "Buzz!";
       }
-      else if (i % 3 == 0) {
-        System.out.println("Fizz!");
+      else if (num % 3 == 0) {
+        result = "Fizz!";
       }
       else {
-        System.out.println(i);
+        result = String.valueOf(num);
       }
-    }
+    return result;
   }
 
 }
